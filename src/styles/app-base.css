@@ -1,0 +1,341 @@
+/*@tailwind base;*/
+
+/**
+ * Custom base styles
+ */
+
+* {
+  /* Text rendering */
+  text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -webkit-text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* :focus {
+  outline: none !important;
+}
+
+html {
+  font-size: 62.5%;
+  font-family:
+    "Inter var",
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    sans-serif;
+  background-color: #121212;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-x: hidden;
+  font-feature-settings: "salt";
+}
+
+html,
+body {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+#root {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+.h1 {
+  font-size: 24px;
+}
+
+h2,
+.h2 {
+  font-size: 20px;
+}
+
+h3,
+.h3 {
+  font-size: 16px;
+}
+
+h4,
+.h4 {
+  font-size: 15px;
+}
+
+h5,
+.h5 {
+  font-size: 13px;
+}
+
+h6,
+.h6 {
+  font-size: 12px;
+}
+
+.ps > .ps__rail-y,
+.ps > .ps__rail-x {
+  z-index: 99;
+}
+
+a[role="button"] {
+  text-decoration: none;
+}
+
+[role="tooltip"] {
+  z-index: 9999;
+}
+
+.MuiModal-root {
+  z-index: 9999;
+}
+
+/* Medium Devices, Desktops Only */
+@media only screen and (min-width: 992px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  ::-webkit-scrollbar:hover {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.06);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    border-radius: 20px;
+  }
+}
+
+form label {
+  z-index: 99;
+}
+
+body.no-animate *,
+body.no-animate *::before,
+body.no-animate *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Removes webkit's autofill backgorund color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transitiondelay: 9999s;
+  transitionproperty: background-color, color;
+}
+
+:focus {
+  outline-color: transparent;
+}
+
+/*fullcalendar Fix*/
+.fc-scrollgrid-section-liquid {
+  height: 1px !important;
+}
+@font-face {
+  font-family: "utm";
+  src: url("../../public/assets/fonts/UTM-Ambrosia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "averta-black";
+  src: url("../../public/assets/fonts/averta/._Averta-Black.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-black-italic";
+  src: url("../../public/assets/fonts/averta/._Averta-BlackItalic.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-bold";
+  src: url("../../public/assets/fonts/averta/._Averta-Bold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-bold-italic";
+  src: url("../../public/assets/fonts/averta/._Averta-BoldItalic.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-extra-bold";
+  src: url("../../public/assets/fonts/averta/._Averta-ExtraBold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-extra-bold-italic";
+  src: url("../../public/assets/fonts/averta/._Averta-ExtraBoldItalic.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-extra-thin";
+  src: url("../../public/assets/fonts/averta/._Averta-Extrathin.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-extra-thin-italic";
+  src: url("../../public/assets/fonts/averta/._Averta-ExtrathinItalic.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-light";
+  src: url("../../public/assets/fonts/averta/._Averta-Light.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-light-italic";
+  src: url("../../public/assets/fonts/averta/._Averta-LightItalic.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-regular";
+  src: url("../../public/assets/fonts/averta/._Averta-Regular.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-regular-italic";
+  src: url("../../public/assets/fonts/averta/._Averta-RegularItalic.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-semibold";
+  src: url("../../public/assets/fonts/averta/._Averta-Semibold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-semibold-italic";
+  src: url("../../public/assets/fonts/averta/._Averta-SemiboldItalic.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-thin";
+  src: url("../../public/assets/fonts/averta/._Averta-Thin.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "averta-thin-italic";
+  src: url("../../public/assets/fonts/averta/._Averta-ThinItalic.otf")
+    format("opentype");
+}
+.utm {
+  font-family: "utm", sans-serif;
+}
+.averta-black {
+  font-family: "averta-black", sans-serif;
+}
+.averta-black-italic {
+  font-family: "averta-black-italic", sans-serif;
+}
+.averta-bold {
+  font-family: "averta-bold", sans-serif;
+}
+.averta-bold-italic {
+  font-family: "averta-bold-italic", sans-serif;
+}
+.averta-extra-bold {
+  font-family: "averta-extra-bold", sans-serif;
+}
+.averta-extra-bold-italic {
+  font-family: "averta-extra-bold-italic", sans-serif;
+}
+.averta-extra-thin {
+  font-family: "averta-extra-thin", sans-serif;
+}
+.averta-extra-thin-italic {
+  font-family: "averta-extra-thin-italic", sans-serif;
+}
+.averta-light {
+  font-family: "averta-light", sans-serif;
+}
+.averta-light-italic {
+  font-family: "averta-light-italic", sans-serif;
+}
+.averta-regular {
+  font-family: "averta-regular", sans-serif;
+}
+.averta-regular-italic {
+  font-family: "averta-regular-italic", sans-serif;
+}
+.averta-semibold {
+  font-family: "averta-semibold", sans-serif;
+}
+.averta-semibold-italic {
+  font-family: "averta-semibold-italic", sans-serif;
+}
+.averta-thin {
+  font-family: "averta-thin", sans-serif;
+}
+.averta-thin-italic {
+  font-family: "averta-thin-italic", sans-serif;
+}
+.btn {
+  background: linear-gradient(180deg, #f4cfa5 0%, #f6ba73 100%);
+}
+.fb-border {
+  border-image: linear-gradient(180deg, #f4cfa5 0%, #f6ba73 100%);
+  border-image-slice: 1;
+}
+a:not([role="button"]):not(.MuiButtonBase-root) {
+  color: rgba(157, 157, 157, 1);
+  text-decoration: 0px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.divide-news {
+  border: 1px solid;
+  border-image-source: linear-gradient(180deg, #F4CFA5 0%, #F6BA73 100%);
+}
+
+.border-dashed {
+              height:2px;
+              background-image:linear-gradient(to right, #570D0C 0%, #570D0C 70%, transparent 30%);
+              background-size:10px 1px;
+              background-repeat:repeat-x;
+}
+
+
+#grouped-saintName-listbox {
+  columns: 2 !important;
+  -webkit-columns: 2  !important;
+  -moz-columns: 2 !important;
+}
+.muiltr-1fc1uow-MuiPaper-root-MuiTableContainer-root {
+  border-radius: 0px !important;
+}
+.muiltr-519da5-MuiTableCell-root{
+  color: #570D0C;    
+  font-weight: 600;
+  /* border-width: 0.25px;
+  border-top: 0px !important;
+  border-color: #570D0C; */
+}

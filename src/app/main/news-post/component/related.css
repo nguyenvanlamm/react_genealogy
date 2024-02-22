@@ -1,0 +1,11 @@
+.item:hover .des {
+  text-underline-offset: 4px;
+  text-decoration-line: underline;
+  color: rgba(158, 43, 37, 1);
+}
+.des {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}

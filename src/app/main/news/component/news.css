@@ -1,0 +1,8 @@
+.muiltr-1imsser-MuiPaginationItem-root{
+    background-color: transparent !important;
+    border-width: 0px !important;
+}
+.makeStyles-paginationRoot-1 .MuiPaginationItem-root:hover {
+    background-color: rgba(244, 244, 244, 0.5);
+    border-color: rgba(190, 190, 190, 0.5),
+}

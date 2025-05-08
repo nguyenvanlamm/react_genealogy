@@ -567,7 +567,6 @@ const Genealogy = () => {
                                         >
                                             <div className="ml-[2%] flex flex-col">
                                                 <div>{item.fullName}</div>
-                                                <div>{item.saintName}</div>
                                             </div>
                                         </div>
                                     ))}
@@ -612,7 +611,7 @@ const Genealogy = () => {
                         </div>
                     ))}
                 </div>
-                <div className="grid grid-rows-3 grid-cols-2 sm:grid-rows-2 sm:grid-cols-3 xl:grid-rows-1 xl:grid-cols-6 gap-[20px] xl:mt-[2%] sm:mt-[4%] maxsm:mt-[6%]">
+                <div className="grid grid-rows-3 grid-cols-2 sm:grid-rows-2 sm:grid-cols-3 xl:grid-rows-1 xl:grid-cols-5 gap-[20px] xl:mt-[2%] sm:mt-[4%] maxsm:mt-[6%]">
                     <div className="relative w-auto min-w-[30%]">
                         <div
                             className="border-1 cursor-pointer rounded-[5px] hover:border-[#000000] justify-between flex border-[#dccfbe] px-[20px] py-[10px]"
@@ -651,67 +650,6 @@ const Genealogy = () => {
                                         {option.label}
                                     </MenuItem>
                                 ))}
-                            </div>
-                        )}
-                    </div>
-
-                    <div className="relative w-auto min-w-[30%]">
-                        <div
-                            className="border-1 cursor-pointer rounded-[5px] hover:border-[#000000] justify-between flex border-[#dccfbe] px-[20px] py-[10px]"
-                            onClick={() => {
-                                CloseDropDown("tenthanh");
-                                SetisOpenHolyName(!isOpenHolyName);
-                            }}
-                        >
-                            <div className="flex items-center">
-                                <img src={iconHolyName} className="w-[18px]"></img>
-                                <div className="ml-4 h-[22px]">{HolyName.label}</div>
-                            </div>
-                            <img
-                                src={arrowDown}
-                                className={
-                                    isOpenHolyName
-                                        ? "w-[15px] h-[15px] rotate-180"
-                                        : "w-[15px] h-[15px] rotate-0"
-                                }
-                            ></img>
-                        </div>
-                        {!isOpenHolyName ? null : (
-                            <div className="flex flex-row py-[2%] px-[5%] bg-white overflow-auto absolute shadow-select pt-[5%] w-full h-[270px] z-[100]">
-                                <div className="flex flex-col w-[50%]">
-                                    <div className="border-b-1 font-semibold border-r-1 xl:text-[14px] lg:text-[12px] md:text-[12px] sm:text-[12px] maxsm:text-[12px]">
-                                        TÊN THÁNH NAM
-                                    </div>
-                                    {dataHolyNames.male.map((option) => (
-                                        <MenuItem
-                                            onClick={() => {
-                                                setHolyName(option);
-                                            }}
-                                            key={option.value}
-                                            value={option.value}
-                                            className="xl:text-[16px] lg:text-[14px] md:text-[12px] sm:text-[12px] maxsm:text-[10px] font-normal"
-                                        >
-                                            {option.label}
-                                        </MenuItem>
-                                    ))}
-                                </div>
-                                <div className="flex flex-col w-[50%]">
-                                    <div className="pl-[2%] border-b-1 font-semibold border-l-1 xl:text-[14px] lg:text-[12px] md:text-[12px] sm:text-[12px] maxsm:text-[12px]">
-                                        TÊN THÁNH NỮ
-                                    </div>
-                                    {dataHolyNames.female.map((option) => (
-                                        <MenuItem
-                                            onClick={() => {
-                                                setHolyName(option);
-                                            }}
-                                            key={option.value}
-                                            value={option.value}
-                                            className="xl:text-[16px] lg:text-[14px] md:text-[12px] sm:text-[12px] maxsm:text-[10px] font-normal"
-                                        >
-                                            {option.label}
-                                        </MenuItem>
-                                    ))}
-                                </div>
                             </div>
                         )}
                     </div>

@@ -406,7 +406,7 @@ const TemplatePage = (props: any) => {
 
           <div onMouseLeave={() => { setOpenPop(false) }} onMouseEnter={() => { setOpenPop(true) }} onClick={() => { setActive(props.item.gender === "female" && props.item.husband != null ? props.item.husband : props.item.code) }} style={{ backgroundImage: props.item.isActive ? "url('assets/images/template/item-active-bg.png')" : "url('assets/images/template/item-bg.png')", backgroundSize: "cover" }} className={`cursor-pointer	 flex flex-col ${props.item.generation === 1 ? "w-[72px] h-[170px]" : "w-[49.129px] h-[116px]"} items-center pt-[10px]`}>
             <div className={`w-full text-center text-[#fff] ${props.item.generation === 1 ? "text-[10px]" : "text-[8px]"} font-normal`}>{props.item.gender === "male" ? "Ông" : "Bà"}</div>
-            <div className={`w-full text-center pt-[5px] pb-[10px] text-[#fff] ${props.item.generation === 1 ? "text-[14px]" : "text-[10px]"} font-normal italic`}>{props.item.saintName}</div>
+            <div className={`w-full text-center pt-[5px] pb-[10px] text-[#fff] ${props.item.generation === 1 ? "text-[14px]" : "text-[10px]"} font-normal italic`}></div>
             {props.item.fullName !== null ? props.item.fullName.split(" ").map((item: any) => {
               return (
                 <div className={`w-full text-center text-[#fff] ${props.item.generation === 1 ? "text-[14px] pb-[4px]" : "text-[10px] pb-[2px]"} font-semibold uppercase`}>{item}</div>
@@ -435,7 +435,6 @@ const TemplatePage = (props: any) => {
           {openPop ? <div className="px-[15px] pt-[25px]  absolute left-[120%] bottom-[80%] z-50 w-[350px] h-[159px]" style={{ backgroundImage: "url('assets/images/template/item-tooltip.png')", backgroundSize: "cover" }}>
             <div className="w-full text-center text-[#9E2B25] text-[12px] font-normal">{props.item.gender === "male" ? "Ông" : "Bà"}</div>
             <div className="w-full flex items-center gap-[5px] justify-center mb-10">
-              <p className="text-[#9E2B25] text-[12px] font-normal italic">{props.item.saintName}</p>
               <p className="text-[#9E2B25] text-[16px] font-bold ">{props.item.fullName}</p>
             </div>
             <div className="w-full text-center text-[#9E2B25] text-[12px] font-normal">Sinh ngày: {props.item.dateOfBirth}</div>
@@ -458,7 +457,6 @@ const TemplatePage = (props: any) => {
 
         <div onMouseLeave={() => { setOpenPop(false) }} onMouseEnter={() => { setOpenPop(true) }} onClick={() => { setActive(props.item.gender === "female" && props.item.husband != null ? props.item.husband : props.item.code) }} style={{ backgroundImage: props.item.isActive ? "url('assets/images/template/item-active-special-bg.png')" : "url('assets/images/template/item-special-bg.png')", backgroundSize: "cover" }} className={`cursor-pointer	 flex w-[300px] h-[78px] items-center justify-center`}>
           <div className="w-full">
-            <div className={`w-full text-center text-[#fff] text-[14px] font-normal italic`}>{props.item.saintName}</div>
             <div className="w-full flex items-center text-[#fff] gap-[5px] justify-center ">
               <p className="text-[10px] font-normal italic">{props.item.gender === "male" ? "Cụ ông" : "Cụ bà"}</p>
               <p className="text-[16px] font-bold ">{props.item.fullName}</p>
@@ -478,7 +476,6 @@ const TemplatePage = (props: any) => {
         {openPop ? <div className="px-[15px] pt-[25px]  absolute left-[120%] bottom-[80%] z-50 w-[350px] h-[159px]" style={{ backgroundImage: "url('assets/images/template/item-tooltip.png')", backgroundSize: "cover" }}>
           <div className="w-full text-center text-[#9E2B25] text-[12px] font-normal">{props.item.gender === "male" ? "Ông" : "Bà"}</div>
           <div className="w-full flex items-center gap-[5px] justify-center mb-10">
-            <p className="text-[#9E2B25] text-[12px] font-normal italic">{props.item.saintName}</p>
             <p className="text-[#9E2B25] text-[16px] font-bold ">{props.item.fullName}</p>
           </div>
           <div className="w-full text-center text-[#9E2B25] text-[12px] font-normal">Sinh ngày: {props.item.dateOfBirth}</div>

@@ -22,33 +22,13 @@ function ToolbarLayout2(props: ToolbarLayout2Props) {
 	const { className = "" } = props;
 	const navigate = useNavigate();
 	const toolbarTheme = useSelector(selectToolbarTheme);
-	const [activePage, setActivePage] = useState("/home");
+	const [activePage, setActivePage] = useState("/genealogy");
 
 	const menuItems = [
 		{
 			id: Math.random(),
-			name: "Trang chủ",
-			path: "home",
-		},
-		{
-			id: Math.random(),
-			name: "Giới thiệu",
-			path: "about",
-		},
-		{
-			id: Math.random(),
 			name: "Gia phả",
 			path: "genealogy",
-		},
-		{
-			id: Math.random(),
-			name: "Tin tức",
-			path: "news",
-		},
-		{
-			id: Math.random(),
-			name: "Liên hệ",
-			path: "contact",
 		},
 	];
 
@@ -69,7 +49,7 @@ function ToolbarLayout2(props: ToolbarLayout2Props) {
 				<Toolbar className="absolute flex flex-row w-full sm:h-[130px] maxsm:h-[70px] min-h-48 px-0 md:min-h-64 lg:px-24 items-center place-content-center">
 					<div className="maxsm:pl-[3%] sm:pl-0 max-w-[1200px] items-center justify-between flex flex-row w-full h-full">
 						<img src={logoNormal} className="cursor-pointer sm:ml-[2%] xl:ml-[0%] sm:w-[95px] sm:h-[95px] maxsm:w-[45px] maxsm:h-[45px]" onClick={() => {
-							navigate("/home")
+							navigate("/genealogy")
 						}}></img>
 						<div className="flex h-full flex-row items-center place-content-center max-w-md text-white">
 							{menuItems.map((value) => (

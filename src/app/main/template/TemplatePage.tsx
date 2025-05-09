@@ -554,7 +554,7 @@ const TemplatePage = (props: any) => {
         childrens.forEach((item) => {
           idsActive.push(item.code);
         });
-        data.forEach((item) => {
+        data.forEach((item) => { 
           if (idsActive.includes(item.code)) {
             item.isActive = true;
           } else {

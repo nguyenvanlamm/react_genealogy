@@ -146,7 +146,7 @@ export interface personalModels {
     "mother"?: null,
     "husband"?: null,
     "dateOfBirth"?: string,
-    "yearOfBirth"?: string,
+    "yearOfBirth"?: number,
     "dateOfDeath"?: string,
     "yearOfDeath"?: string,
     "longevity"?: 84,

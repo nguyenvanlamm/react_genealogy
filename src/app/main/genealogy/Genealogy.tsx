@@ -1,6 +1,5 @@
 import BannerCarouselGenealogy from "./components/BannerCarouselGenealogy";
 import bgGenealogy from "./images/bgGenealogy.jpg";
-import iconHolyName from "./images/iconHolyName.png";
 import iconGenealogy from "./images/iconGenealogy.png";
 import iconGender from "./images/iconGender.png";
 import iconYearThree from "./images/iconYearThree.png";
@@ -166,20 +165,6 @@ const Genealogy = () => {
             label: "Đời 1",
         },
     ]);
-    const [dataHolyNames, SetDataHolyName] = useState<holyNameModel>({
-        male: [
-            {
-                value: "Mata",
-                label: "Mata",
-            },
-        ],
-        female: [
-            {
-                value: "Mata",
-                label: "Mata",
-            },
-        ],
-    });
 
     const statistical: dataStatisticalModel = {
         sumGenealogy: 0,
@@ -187,11 +172,6 @@ const Genealogy = () => {
         sumMale: 0,
         sumFemale: 0,
         genealogies: [],
-    };
-
-    const holyNames: holyNameModel = {
-        male: [],
-        female: [],
     };
 
     const dataGenealogy: optionModel[] = [
@@ -279,12 +259,10 @@ const Genealogy = () => {
     const SetDataGenealogyTable = () => {
         dataJson.forEach((item) => {
             SetDataGenealogy(item);
-            SetDataHolyNames(item);
             SetDataTable(item);
         });
 
         SetDataGeneration(dataGenealogy);
-        SetDataHolyName(holyNames);
         SetDataStatistical(statistical);
     };
 
@@ -323,41 +301,6 @@ const Genealogy = () => {
         }
     };
 
-    const SetDataHolyNames = (item: any) => {
-        if (item.gender == "male") {
-            var isExist = false;
-            holyNames.male.forEach((itemValue) => {
-                if (itemValue.value == item.saintName) {
-                    isExist = true;
-                    return;
-                }
-            });
-
-            if (!isExist) {
-                const data: optionModel = {
-                    value: item.saintName,
-                    label: item.saintName,
-                };
-                holyNames.male.push(data);
-            }
-        } else {
-            var isExist = false;
-            holyNames.female.forEach((itemValue) => {
-                if (itemValue.value == item.saintName) {
-                    isExist = true;
-                    return;
-                }
-            });
-
-            if (!isExist) {
-                const data: optionModel = {
-                    value: item.saintName,
-                    label: item.saintName,
-                };
-                holyNames.female.push(data);
-            }
-        }
-    };
 
     const SetDataGenealogy = (item: any) => {
         if (dataGenealogy.length <= 0) {
@@ -406,17 +349,6 @@ const Genealogy = () => {
                 return item;
             } else {
                 if (gender.value == item.gender) {
-                    return item;
-                }
-            }
-        });
-
-        // filter name
-        dataFilter = dataFilter.filter((item) => {
-            if (HolyName.value == "-1") {
-                return item;
-            } else {
-                if (HolyName.value == item.saintName) {
                     return item;
                 }
             }

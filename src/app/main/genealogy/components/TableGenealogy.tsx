@@ -45,15 +45,6 @@ function TableGenealogy( props: {dataPersonal: personalModels[]}) {
                                 }}
                                 align="center"
                             >
-                                TÊN THÁNH
-                            </TableCell>
-                            <TableCell
-                                sx={{
-                                    borderRight: "0.25px solid #570D0C",
-                                    borderBottom: "0.25px solid #570D0C",
-                                }}
-                                align="center"
-                            >
                                 HỌ VÀ TÊN
                             </TableCell>
                             <TableCell
@@ -140,16 +131,7 @@ function TableGenealogy( props: {dataPersonal: personalModels[]}) {
                                 >
                                     {row.relationshipToHeadOfHousehold}
                                 </TableCell>
-                                <TableCell
-                                    sx={{
-                                        borderLeft: "0.25px solid #570D0C",
-                                        borderRight: "0.25px solid #570D0C",
-                                        borderBottom: "0.25px dashed #570D0C",
-                                    }}
-                                    align="left"
-                                >
-                                    {row.saintName}
-                                </TableCell>
+                                
                                 <TableCell
                                     sx={{
                                         borderLeft: "0.25px solid #570D0C",

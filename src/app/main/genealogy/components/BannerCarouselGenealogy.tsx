@@ -1,7 +1,7 @@
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import "../../about/component/about.css";
-import slider_1 from "../../home/images/slide-1.jpg";
+import slider_1 from "./home/images/slide-1.jpg";
 
 const handleDragStart = (e) => e.preventDefault();
 

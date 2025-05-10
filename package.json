@@ -2,6 +2,7 @@
     "name": "fuse-react-app",
     "version": "9.0.0",
     "private": true,
+    "homepage": "https://nguyenvanlamm.github.io/react_genealogy",
     "dependencies": {
         "@emotion/cache": "11.11.0",
         "@emotion/react": "11.11.1",

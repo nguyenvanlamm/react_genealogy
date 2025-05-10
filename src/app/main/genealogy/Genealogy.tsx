@@ -1,4 +1,4 @@
-import BannerCarouselGenealogy from "./components/BannerCarouselGenealogy";
+import BannerCarouselGenealogy from "./components/BannerCarouselGenealogy.tsx";
 import bgGenealogy from "./images/bgGenealogy.jpg";
 import iconGenealogy from "./images/iconGenealogy.png";
 import iconGender from "./images/iconGender.png";

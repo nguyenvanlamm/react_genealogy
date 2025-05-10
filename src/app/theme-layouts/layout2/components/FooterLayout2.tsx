@@ -35,7 +35,7 @@ function FooterLayout2(props: FooterLayout2Props) {
 							<div>Liên hệ</div>
 						</div>
 						<div className='z-[5] h-[1px] bg-white w-[55%]'></div>
-						<div className='z-[5] xl:text-[14px] lg:text-[12px] md:text-[12px] sm:text-[12px] maxsm:text-[12px]'>© 2024 Yolo Tech</div>
+						<div className='z-[5] xl:text-[14px] lg:text-[12px] md:text-[12px] sm:text-[12px] maxsm:text-[12px]'>© Gia Phả Họ Nguyễn</div>
 						<img src={imageFooter} className='absolute sm:w-[27%] sm:h-[90%] sm:w-[25%] sm:h-[90%] maxsm:w-[25%] maxsm:h-[60%] right-0 buttom-0'></img>
 					</div>
 				</Toolbar>
